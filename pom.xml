@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jpa.hibernate</groupId>
+	<artifactId>jpa-performance</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<carclinic.db.url>jdbc:oracle:thin:@(DESCRIPTION=(SOURCE_ROUTE=YES)
+			(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)))</carclinic.db.url>
+		<carclinic.db.user>car_clinic</carclinic.db.user>
+		<carclinic.db.password>carclinic</carclinic.db.password>
+		<oracle.driver>oracle.jdbc.OracleDriver</oracle.driver>
+		<version.oracle.driver>12.2.0.1</version.oracle.driver>
+		<version.jpa>2.2</version.jpa>
+		<version.lombok>1.18.6</version.lombok>
+		<version.hibernate>5.4.2.Final</version.hibernate>
+		<version.hibernate.validator>6.0.16.Final</version.hibernate.validator>
+		<!-- message are evaluated using Expression Language by the Bean Validation runtime -->
+		<version.el>3.0.1-b11</version.el>
+		<!-- Test -->
+		<version.junit>5.3.2</version.junit>
+		<version.junit.platform>1.3.2</version.junit.platform>
+		<!-- logback -->
+		<version.logback>1.2.3</version.logback>
+		
+		<!-- Project -->
+		<version.java>1.8</version.java>
+		<maven.compiler.source>${version.java}</maven.compiler.source>
+		<maven.compiler.target>${version.java}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${version.lombok}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${version.oracle.driver}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>${version.jpa}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${version.hibernate}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${version.hibernate.validator}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${version.junit}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${version.logback}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${version.logback}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>${version.el}</version>
+		</dependency>
+
+
+
+	</dependencies>
+</project>

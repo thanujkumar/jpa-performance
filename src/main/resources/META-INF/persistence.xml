@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd ">
+
+	<persistence-unit name="beanValidationJPA" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<class>jpa.performance.sequence.ex1.Book</class>
+		<class>jpa.performance.sequence.ex2.BookHJPA</class>
+		<class>jpa.performance.sequence.ex2.BookHiLo</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@(DESCRIPTION=(SOURCE_ROUTE=YES)
+			(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)))" />
+			<property name="javax.persistence.jdbc.user" value="car_clinic" />
+			<property name="javax.persistence.jdbc.password" value="carclinic" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect" />
+            <!--  property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/ -->
+			<!-- property name="hibernate.hbm2ddl.auto" value="create-drop" /-->
+			<!-- https://vladmihalcea.com/from-jpa-to-hibernates-legacy-and-enhanced-identifier-generators/ -->
+			<!-- property name="hibernate.id.new_generator_mappings" value="true"/ -->
+
+			
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
