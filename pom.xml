@@ -14,7 +14,7 @@
 		<version.oracle.driver>12.2.0.1</version.oracle.driver>
 		<version.jpa>2.2</version.jpa>
 		<version.lombok>1.18.6</version.lombok>
-		<version.hibernate>5.4.2.Final</version.hibernate>
+		<version.hibernate>5.4.24.Final</version.hibernate>
 		<version.hibernate.validator>6.0.16.Final</version.hibernate.validator>
 		<!-- message are evaluated using Expression Language by the Bean Validation runtime -->
 		<version.el>3.0.1-b11</version.el>
